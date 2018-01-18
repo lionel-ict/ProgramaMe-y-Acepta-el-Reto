@@ -1,4 +1,4 @@
-package navidad_2017;
+package navidad2017;
 
 import java.util.Scanner;
 
