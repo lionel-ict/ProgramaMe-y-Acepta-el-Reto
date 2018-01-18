@@ -2,7 +2,7 @@ package navidad2017;
 
 import java.util.Scanner;
 
-public class tendendiaalladooscuro {
+public class tendenciaalladooscuro {
 
 	public static void main(String[] args) {
 
