@@ -22,7 +22,7 @@ public class escaparfuerzasimpreriales3_TLE {
 			return false;
 	}
 
-	// Dime el índice del candidato más cercano (menor distancia)
+	// Dime el indice del candidato mas cercano (menor distancia)
 	public static final int dimemejorcandidato() {
 		int dist = 1000000;
 		int mejor = -1;
@@ -68,10 +68,10 @@ public class escaparfuerzasimpreriales3_TLE {
 			mapa[sx][sy] = '.';
 			mapa[fx][fy] = '.';
 
-			// Creamos lista vacía
+			// Creamos lista vacia
 			lista = new ArrayList<int[]>();
 
-			// Añadimos S a la lista de candidatos (inicio del camino)
+			// AÃ±adimos S a la lista de candidatos (inicio del camino)
 			int dist = Math.abs(fx - sx) + Math.abs(fy - sy);
 			lista.add(new int[] { dist, sx, sy });
 
@@ -97,7 +97,7 @@ public class escaparfuerzasimpreriales3_TLE {
 					break;
 				}
 
-				// Añadimos los vecinos a la lista (si son posible camino)
+				// AÃ±adimos los vecinos a la lista (si son posible camino)
 				int Cx = C[1];
 				int Cy = C[2];
 				// Vecino Derecha
@@ -134,7 +134,7 @@ public class escaparfuerzasimpreriales3_TLE {
 
 			}
 
-			// Si lista vacía, no hay camino
+			// Si lista vacia, no hay camino
 			if (haycamino)
 				System.out.println("SI");
 			else

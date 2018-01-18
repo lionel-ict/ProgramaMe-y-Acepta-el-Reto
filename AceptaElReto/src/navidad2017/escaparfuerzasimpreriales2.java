@@ -15,7 +15,7 @@ public class escaparfuerzasimpreriales2 {
 			return false;
 		}
 
-		// Si espacio vacío, seguimos probando caminos
+		// Si espacio vacio, seguimos probando caminos
 		if (mapa[x][y] == '.') {
 			// Lo marcamos como asteroide, para que no se repita (bucle infinito)
 			mapa[x][y] = '*';
@@ -108,7 +108,7 @@ public class escaparfuerzasimpreriales2 {
 			return false;
 		}
 
-		// Si start (S), no seguir por ahí
+		// Si start (S), no seguir por ahï¿½
 		// if (mapa[x][y] == 'S')
 		// return false;
 
@@ -117,7 +117,7 @@ public class escaparfuerzasimpreriales2 {
 			return true;
 		}
 
-		// Otro caso no debería darse nunca
+		// Otro caso no deberï¿½a darse nunca
 		return false;
 	}
 

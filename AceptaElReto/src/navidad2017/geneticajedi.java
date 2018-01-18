@@ -22,13 +22,13 @@ public class geneticajedi {
 			// Mientras haya familias que procesar
 			for (int i = 0; i < familias; i++) {
 
-				// Nº de hijos
+				// NÂº de hijos
 				int hijos = scan.nextInt();
 				// Midiclorianos que transmiten los padres
 				int midic = scan.nextInt();
 
 				// Mientras haya hijos que procesar, buscamos
-				// el valor máximo (mayor influencia de la fuerza)
+				// el valor maximo (mayor influencia de la fuerza)
 				int max = -1;
 				while (hijos > 0) {
 					int h = scan.nextInt();
