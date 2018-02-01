@@ -8,7 +8,7 @@ public class organizandohangares {
 	public static int H[] = new int[10];
 	public static int tamH;
 
-	// Inserta hangar de tama�o x en H[] y lo mantiene ordenado
+	// Inserta hangar de tamaño x en H[] y lo mantiene ordenado
 	public static void insertH(int x) {
 
 		// Insertamos al final
@@ -70,7 +70,7 @@ public class organizandohangares {
 				insertH(scan.nextInt());
 			}
 
-			// N� de naves
+			// Nº de naves
 			n = scan.nextInt();
 
 			// Asumimos que caben
@@ -79,7 +79,7 @@ public class organizandohangares {
 			// Procesamos las naves
 			while (n>0) {
 
-				// Tama�o de la nave
+				// Tamaño de la nave
 				int nave = scan.nextInt();
 				
 				// Si cabe la nave, la restamos

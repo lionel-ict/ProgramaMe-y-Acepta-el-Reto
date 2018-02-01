@@ -2,7 +2,9 @@ package navidad2017;
 
 import java.util.Scanner;
 
-public class escaparfuerzasimpreriales_simple {
+public class escaparfuerzasimpreriales {
+
+    public static int sx, sy;
 
     // Busca camino
     public static boolean camino(char mapa[][], int x, int y) {
@@ -26,6 +28,15 @@ public class escaparfuerzasimpreriales_simple {
             // Probamos Derecha
             if (camino(mapa, x + 1, y)) {
                 return true;
+            } // Probamos Abajo
+            else if (camino(mapa, x, y + 1)) {
+                return true;
+            } // Probamos Izquierda
+            else if (camino(mapa, x - 1, y)) {
+                return true;
+            } // Probamos Arriba
+            else if (camino(mapa, x, y - 1)) {
+                return true;
             } // Si no, ningun camino posible
             else {
                 return false;
@@ -43,17 +54,14 @@ public class escaparfuerzasimpreriales_simple {
             return true;
         }
 
-        // Otro caso no deberia darse nunca
+        // Otro caso no deberia darse nunca, pero por si acaso, return false
         return false;
     }
 
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        
-        int sx = -1;
-        int sy = -1;
-        
+
         // int filas, columnas;
         char mapa[][] = new char[20][20];
 
@@ -77,7 +85,7 @@ public class escaparfuerzasimpreriales_simple {
                     }
                 }
             }
-
+            
             // Comprobamos si hay camino desde S hasta F
             if (camino(mapa, sx, sy)) {
                 System.out.println("SI");
