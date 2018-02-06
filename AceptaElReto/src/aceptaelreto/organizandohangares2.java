@@ -1,19 +1,27 @@
-package navidad2017;
+package aceptaelreto;
 
 import java.util.Scanner;
 
-public class organizandohangares {
+public class organizandohangares2 {
+
+	// public static int h, n;
 
 	// HANGARES: Vector que hay que mantener ordenado de mayor a menor
 	public static int H[] = new int[10];
-	public static int tamH;
+	public static int tamH; // tama�o del vector
+	public static int espacioH; // espacio total de hangares
 
-	// Inserta hangar de tamaño x en H[] y lo mantiene ordenado
+	// NAVES en el orden en el que llegan
+	public static int N[] = new int[200];
+	public static int espacioN; // espacio total de naves
+
+	// Inserta hangar de tama�o x en H[] y lo mantiene ordenado
 	public static void insertH(int x) {
 
 		// Insertamos al final
 		H[tamH] = x;
 		tamH++;
+		espacioH += x;
 
 		// Re-ordenamos recorriendo H desde el final,
 		// intercambiando con el anterior si H[i-1] < H[i]
@@ -62,37 +70,43 @@ public class organizandohangares {
 		// Mientras no haya 0 hangares
 		while ((h = scan.nextInt()) != 0) {
 
-			// Empezamos con H vac�o
+			// Inicializamos
 			tamH = 0;
+			espacioH = 0;
+			espacioN = 0;
+			boolean caben = true;
 
-			// Almacenamos tama�o de los hangares
+			// Almacenamos todos los hangares
 			for (int i = 0; i < h; i++) {
 				insertH(scan.nextInt());
 			}
 
-			// Nº de naves
+			// N� de naves
 			n = scan.nextInt();
 
-			// Asumimos que caben
-			boolean caben = true;
+			// Almacenamos todas las naves
+			for (int i = 0; i < n; i++) {
+				N[i] = scan.nextInt();
+				espacioN += N[i];
+			}
 
-			// Procesamos las naves
-			while (n>0) {
+			// Si las naves ocupan m�s que los hangares, est� claro que NO
+			if (espacioN > espacioH) {
+				caben = false;
+			}
+			// De lo contrario, procesamos las naves una a una y comprobamos si caben
+			else {
+				for (int i = 0; i < n; i++) {
 
-				// Tamaño de la nave
-				int nave = scan.nextInt();
-				
-				// Si cabe la nave, la restamos
-				if (nave <= H[0])
-					subtractH(nave);
-				// Si no cabe, terminamos
-				else {
-					scan.nextLine();
-					caben = false;
-					break;
+					// Si cabe la nave, la restamos
+					if (N[i] <= H[0])
+						subtractH(N[i]);
+					// Si no cabe, terminamos
+					else {
+						caben = false;
+						break;
+					}
 				}
-				
-				n--;
 			}
 
 			// Imprimimos si caben o no caben

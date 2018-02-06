@@ -1,4 +1,4 @@
-package navidad_2017;
+package aceptaelreto;
 
 import java.util.Arrays;
 import java.util.Scanner;
