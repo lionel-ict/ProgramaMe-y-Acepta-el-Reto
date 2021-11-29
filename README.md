@@ -1,2 +1,2 @@
-# Mis Problemas Resuelto de AceptaElReto
+# Problemas Resueltos de AceptaElReto.com
 https://www.aceptaelreto.com
